@@ -16,7 +16,9 @@
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
+	"package": "com.e_tourism_app",
+	"googleServicesFile": "./google-services.json",
+    "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
