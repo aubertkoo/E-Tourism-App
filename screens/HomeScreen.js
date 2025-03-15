@@ -1,35 +1,53 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { Image } from 'react-native';
-import Logo from 'C:/Users/User/E-Tourism-App/assets/logo.png';
+import React from "react";
+import { View, Text, ImageBackground, StyleSheet, Dimensions } from "react-native";
+import { Button } from "react-native-paper";
 
-export default function HomeScreen() {
+const { width, height } = Dimensions.get("window");
+
+export default function HomeScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-	  <Image source={Logo} style={styles.logo} />
-      <Text style={styles.title}>Welcome to E-Tourism Sarawak!</Text>
-    </View>
+    <ImageBackground source={require("../assets/sarawak-bg.png")} style={[styles.background, { width, height }]}>
+      <View style={styles.overlay}>
+        <Text style={styles.title}>Welcome to Sarawak Explorer</Text>
+
+        {/* Navigate to Attractions Screen Instead of Region Selection */}
+        <Button mode="contained" style={styles.button} onPress={() => navigation.navigate("Attractions")}>
+          View Attractions
+        </Button>
+
+        <Button mode="contained" style={styles.button} onPress={() => navigation.navigate("Map")}>
+          View Map
+        </Button>
+
+        <Button mode="contained" style={styles.button} onPress={() => navigation.navigate("Itinerary")}>
+          My Itinerary
+        </Button>
+      </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  background: {
+    resizeMode: "cover",
+  },
+  overlay: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f0f0f0',
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Adds a dark overlay for better readability
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
+    fontSize: 26,
+    fontWeight: "bold",
+    color: "white",
+    marginBottom: 20,
+    textAlign: "center",
   },
-  logo: {
-  width: 150,  // Adjust size as needed
-  height: 150, // Adjust size as needed
-  marginBottom: 20,
-  resizeMode: 'contain' 
+  button: {
+    marginVertical: 10,
+    width: 250,
+    borderRadius: 10,
+    backgroundColor: "#6a0dad", // Nice Purple Theme
   },
-
 });
- 
