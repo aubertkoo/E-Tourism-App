@@ -14,49 +14,65 @@ import { MaterialIcons } from "@expo/vector-icons";
 // Attractions Data for Different Regions
 const attractionsData = {
   Kuching: [
-    { id: "1", name: "Mount Santubong", description: "A majestic mountain with scenic hiking trails.", image: "https://via.placeholder.com/300" },
-    { id: "2", name: "Bako National Park", description: "Home to stunning beaches and unique wildlife.", image: "https://via.placeholder.com/300" },
-    { id: "3", name: "Sarawak Cultural Village", description: "Experience the rich heritage of Sarawak’s tribes.", image: "https://via.placeholder.com/300" },
-  ],
-  Lundu: [
-    { id: "12", name: "Pandan Beach", description: "A quiet beach with golden sands.", image: "https://via.placeholder.com/300" },
-    { id: "13", name: "Gunung Gading National Park", description: "Famous for Rafflesia, the world's largest flower.", image: "https://via.placeholder.com/300" },
+    { id: "1", name: "Sarawak Cultural Village", description: "Cultural heritage center.", image: require("../assets/images/attractions/sarawak_cultural_village.jpg")},
+    { id: "2", name: "Semenggoh Wildlife Centre", description: "Orangutan sanctuary.", image: require("../assets/images/attractions/semenggoh.jpg") },
+    { id: "3", name: "Kuching Waterfront", description: "Scenic riverside area.", image: require("../assets/images/attractions/kuching_waterfront.jpg") },
+    { id: "4", name: "Cat Museum", description: "Museum dedicated to cats.", image: require("../assets/images/attractions/cat_museum.jpg") },
+    { id: "5", name: "Fort Margherita", description: "Historic fort.", image: require("../assets/images/attractions/fort_margherita.jpg") },
+    { id: "6", name: "Bako National Park", description: "National park with trails.", image: require("../assets/images/attractions/bako_np.jpg") },
   ],
   Miri: [
-    { id: "4", name: "Niah Caves", description: "Famous for prehistoric cave paintings and large chambers.", image: "https://via.placeholder.com/300" },
-    { id: "5", name: "Mulu National Park", description: "UNESCO World Heritage site with amazing caves and rainforest.", image: "https://via.placeholder.com/300" },
+    { id: "7", name: "Niah Caves", description: "Ancient caves.", image: require("../assets/images/attractions/niah_caves.jpg") },
+    { id: "8", name: "Coco Cabana", description: "Iconic seafront structure.", image: require("../assets/images/attractions/coco_cabana.jpg") },
+    { id: "9", name: "Tusan Beach", description: "Beach with blue tears.", image: require("../assets/images/attractions/tusan_beach.jpg") },
+    { id: "10", name: "Lambir Hills", description: "National park.", image: require("../assets/images/attractions/lambir.jpg") },
+    { id: "11", name: "Canada Hill", description: "Hilltop view & museum.", image: require("../assets/images/attractions/canada_hill.jpg") },
+    { id: "12", name: "Miri City Fan", description: "Urban park.", image: require("../assets/images/attractions/miri_city_fan.jpg") },
   ],
   Sibu: [
-    { id: "6", name: "Sibu Central Market", description: "One of the largest markets in Malaysia.", image: "https://via.placeholder.com/300" },
-    { id: "7", name: "Rajang Esplanade", description: "A scenic waterfront area with great food stalls.", image: "https://via.placeholder.com/300" },
+    { id: "13", name: "Tua Pek Kong Temple", description: "Old Chinese temple.", image: require("../assets/images/attractions/tua_pek_kong_sibu.jpg") },
+    { id: "14", name: "Sibu Night Market", description: "Food and goods market.", image: require("../assets/images/attractions/sibu_night_market.jpg") },
+    { id: "15", name: "Bukit Lima Park", description: "Forest trail.", image: require("../assets/images/attractions/bukit_lima.jpg") },
+    { id: "16", name: "Rejang Esplanade", description: "Riverside walk.", image: require("../assets/images/attractions/rejang_esplanade.jpg") },
+    { id: "17", name: "Wisma Sanyan", description: "Tallest building in Sibu.", image: require("../assets/images/attractions/wisma_sanyan.jpg") },
+    { id: "18", name: "Sibu Heritage Centre", description: "Museum of Sibu's history.", image: require("../assets/images/attractions/sibu_heritage.jpg") },
   ],
   Bintulu: [
-    { id: "8", name: "Similajau National Park", description: "Golden beaches and diverse wildlife.", image: "https://via.placeholder.com/300" },
+    { id: "19", name: "Similajau National Park", description: "Beach and jungle park.", image: require("../assets/images/attractions/similajau.jpg") },
+    { id: "20", name: "Tanjung Batu Beach", description: "Popular beach.", image: require("../assets/images/attractions/tanjung_batu.jpg") },
+    { id: "21", name: "Council Negeri Monument", description: "Historic monument.", image: require("../assets/images/attractions/monument_bintulu.jpg") },
+    { id: "22", name: "Bintulu Waterfront", description: "Leisure park.", image: require("../assets/images/attractions/bintulu_waterfront.jpg") },
+    { id: "23", name: "Bintulu Tamu", description: "Local market.", image: require("../assets/images/attractions/bintulu_tamu.jpg") },
+    { id: "24", name: "Assyakirin Mosque", description: "Grand mosque in town.", image: require("../assets/images/attractions/assyakirin.jpg") },
   ],
   Bau: [
-    { id: "9", name: "Fairy Cave", description: "A massive limestone cave with beautiful formations.", image: "https://via.placeholder.com/300" },
-    { id: "10", name: "Wind Cave", description: "A natural limestone cave with underground rivers.", image: "https://via.placeholder.com/300" },
+    { id: "25", name: "Fairy Cave", description: "Limestone cave.", image: require("../assets/images/attractions/fairy_cave.jpg") },
+    { id: "26", name: "Wind Cave", description: "Bat-filled cave.", image: require("../assets/images/attractions/wind_cave.jpg") },
+    { id: "27", name: "Tasik Biru", description: "Scenic blue lake.", image: require("../assets/images/attractions/tasik_biru.jpg") },
   ],
   Serian: [
-    { id: "11", name: "Ranchan Waterfall", description: "A relaxing spot with cascading waterfalls.", image: "https://via.placeholder.com/300" },
+    { id: "28", name: "Ranchan Waterfall", description: "Picnic & waterfall area.", image: require("../assets/images/attractions/ranchan.jpg") },
+  ],
+  Lundu: [
+    { id: "29", name: "Gunung Gading", description: "Rafflesia flower park.", image: require("../assets/images/attractions/gunung_gading.jpg") },
+    { id: "30", name: "Pandan Beach", description: "Scenic beach.", image: require("../assets/images/attractions/pandan_beach.jpg") },
   ],
   Sematan: [
-    { id: "14", name: "Telok Melano Beach", description: "A secluded paradise for nature lovers.", image: "https://via.placeholder.com/300" },
+    { id: "31", name: "Sematan Beach", description: "Long sandy beach.", image: require("../assets/images/attractions/sematan_beach.jpg") },
+    { id: "32", name: "Telok Melano", description: "Coastal village.", image: require("../assets/images/attractions/telok_melano.jpg") },
   ],
   Betong: [
-    { id: "15", name: "Bukit Sadok", description: "A historic fortress site with scenic views.", image: "https://via.placeholder.com/300" },
+    { id: "33", name: "Fort Lily", description: "Historical site.", image: require("../assets/images/attractions/fort_lily.jpg") },
   ],
   Mukah: [
-    { id: "16", name: "Jerunei Garden", description: "A cultural heritage site showcasing Melanau traditions.", image: "https://via.placeholder.com/300" },
+    { id: "34", name: "Kuala Mukah Beach", description: "Black sand beach.", image: require("../assets/images/attractions/kuala_mukah.jpg") },
+    { id: "35", name: "Melanau Tall House", description: "Cultural house.", image: require("../assets/images/attractions/melanau_tallhouse.jpg") },
   ],
   Limbang: [
-    { id: "17", name: "Limbang Museum", description: "A historical museum displaying local artifacts.", image: "https://via.placeholder.com/300" },
+    { id: "36", name: "Bukit Mas", description: "Town hill view.", image: require("../assets/images/attractions/bukit_mas.jpg") },
   ],
   Lawas: [
-    { id: "18", name: "Trusan River", description: "A scenic river for boat tours.", image: "https://via.placeholder.com/300" },
-  ],
-  KapuasHulu: [
-    { id: "19", name: "Batutumong", description: "A nature reserve with beautiful scenery.", image: "https://via.placeholder.com/300" },
+    { id: "37", name: "Punang Beach", description: "Peaceful beach.", image: require("../assets/images/attractions/punang_beach.jpg") },
   ],
 };
 
@@ -182,7 +198,7 @@ export default function AttractionsScreen({ navigation }) {
           <Modal animationType="slide" transparent={true} visible={!!selectedAttraction} onRequestClose={() => setSelectedAttraction(null)}>
             <View style={styles.modalContainer}>
               <View style={styles.modalContent}>
-                <Image source={{ uri: selectedAttraction.image }} style={styles.modalImage} />
+                <Image source={selectedAttraction.image} style={styles.modalImage} />
                 <Text style={styles.modalTitle}>{selectedAttraction.name}</Text>
                 <Text style={styles.modalDescription}>{selectedAttraction.description}</Text>
 
@@ -296,39 +312,50 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   container: {
-    flex: 1,
-    padding: 10,
-    justifyContent: "flex-start",
-    alignItems: "center",
-  },
+  flex: 1,
+  paddingTop: 20,
+  backgroundColor: "#F4ECFF", // optional for better bg
+},
   headerContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 10,
-    marginBottom: 10,
-    backgroundColor: "#E6D6FF",
-    borderRadius: 10,
-    width: "90%",
-  },
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingVertical: 10,
+  marginBottom: 10,
+  width: "100%",
+  paddingHorizontal: 16,
+},
+  headerButtonContainer: {
+  backgroundColor: "#E6D6FF", // 紫色只在按钮背景
+  borderRadius: 10,
+  paddingHorizontal: 20,
+  paddingVertical: 8,
+  borderWidth: 1,           // ✅ Add this
+  borderColor: "red",
+  minWidth: 100,            // ✅ Add this
+  alignItems: "center",
+},
   header: {
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
   },
   list: {
-    flex: 1,
-    width: "90%",
-  },
+   flex: 1,
+   paddingHorizontal: 16,
+   },
   listContent: {
-    paddingVertical: 10,
-    paddingBottom: 20,
-    alignItems: "center",
+   paddingVertical: 10,
+   paddingBottom: 20,
+   },
+
+  card: {
+  marginVertical: 8,
+  width: "90%",
+  maxWidth: 320,
+  alignSelf: "center", // Center it within list container
   },
-  card: { 
-    marginVertical: 8,
-    width: "100%",
-  },
+	
   cardContent: {
     backgroundColor: "white",
     borderRadius: 12,

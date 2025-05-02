@@ -19,12 +19,12 @@ export default function AttractionDetails() {
       <View style={styles.card}>
         {/* 🖼️ Image (If available) */}
         {image ? (
-          <Image source={{ uri: image }} style={styles.image} />
-        ) : (
-          <View style={styles.imagePlaceholder}>
-            <Text style={styles.placeholderText}>No Image Available</Text>
-          </View>
-        )}
+		<Image source={image} style={styles.image} />
+		) : (
+		<View style={styles.imagePlaceholder}>
+		<Text style={styles.placeholderText}>No Image Available</Text>
+		</View>
+		)}
 
         {/* 📌 Attraction Name */}
         <Text style={styles.title}>{name}</Text>
